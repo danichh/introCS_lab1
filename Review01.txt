@@ -1,0 +1,141 @@
+# Computer Component
+	- Memory
+		* RAM: Random Access Memory, the one we reference to
+		* ROM: Read Only Memory, for booting computers
+		* Catch
+			- L1
+			- L2
+	- CPU: Central Processing Unit, also be called "Processor"
+		* 32 bit: old, only supports 32 bit software, sign: x86
+		* 64 bit: new, supports both 32 and 64 bit software, sign: x64
+		* Different CPUs have different instruction sets
+	- Hard drive
+	- Input/output
+
+# Signals
+	- Analog: continuous, pro: contains more information, con: sensitive to noise
+	- Digital: only 0 and 1: pro: not senetive to noise, con: contains less information, computer use this one.
+
+# Bit and Byte
+	- Bit: one 0 or 1 is a bit, (b)
+	- Byte: 8 bits is a byte, (B)
+	- KB, MB, GB, TB, ratio: 1024 2^10
+
+# Different Languages:
+	- Machine Language: CPU can understand, impossible to read and write
+	- Assembling Language: CPU cannot understand, but easier to read and write
+	- High-level Programming Language: CPU cannot understand, but it is very similar to natural language:
+		* Java
+		* C++
+		* C#
+		* Python
+
+# Different codes:
+	- Source Code: The high-level code we write: ".java"
+	- Machine Code (Binary Code): 0 and 1
+	- Byte Code: beween source code and machine code, (low): ".jar", ".class"
+	- Compiling: Translate Source Code to Machine Code(C++)/Byte Code(Java), slow.
+
+# Bug and Debug:
+	- Bug could be undersood as an error, (not not necessary)
+		# Compile Error: Compiler cannot understand your code, usually because there is a typo, or missng ";"
+		# Run-time Error: Compiler has no problem to understand your code, but when you run the code, it leds to an illegal behavior, String str = "hello", check 10th character.
+		# Logic Error: your algorithm is wrong, kg to lb, instead of * 2.2, you write / 2.2
+	- Debug: when a bug appears, try to locate it and fix it
+
+# Number Representation
+	- Binary: {0, 1}
+	- Octal: [0, 7], [0, 8)
+	- Decimal: [0, 9]
+	- Hexadecimal: [0, 9] + [a, f]
+
+	- Conversion:
+		* Octal <-> Decimal
+		* Octal <-> Hexadecimal
+		* Hexadecimal <-> Decimal
+			use Binary as the bridge 
+
+# IDE & TextEditor
+	- TextEditor is ligher
+	- IDE contains: 
+		* Compiling tools
+		* Debug tools
+		* Text Editor
+		* Profiler
+
+# Identifier
+	- Indentifier: name
+	- Rules:
+		* Correct name: can only use: letters, numbers, _, $, cannot start with number
+		* Self-documenting: the name needs to explain itself, avoid "x", "y", "a"....
+			- camelcase
+				* class: "X"xxxXxxxXxx
+				* variable: "x"xxxXxxxXxx
+				* method: "x"xxxXxxxXxx()
+
+# Data Type
+	- Primitive Data Type: Java defined, is the base data type
+		* Integral
+			* long		8
+			* int 		4
+			* short 	2
+			* char  	2
+			* byte  	1
+		* Floating
+			* double	8		3.14
+			* float 	4		3.14f
+		* Boolean
+	- Class: User defined, is a collection of base data types
+
+	- ASCII table is subset of Unicode
+		* 'a' > 'A'
+		* '3' > 3
+		* 'a' < 'b'
+
+# Arithmetic Operation
+	- + - * / 
+	- %   a % b = ?
+		* a / b = c
+		* a - b * c = result
+ 		* If you have $a with you, and you want to buy stuff with price $b, you buy as much as you can, how much money do have after?
+
+ 		* 13 % 3 = 1
+ 		* 3 % 13 = 3
+ 		* 3 % 3 = 0
+
+ 		in general: a % b = can only be a number in range [0, b)
+ 					if a < b, = a
+	 		0 % 3 = 0
+	 		1 % 3 = 1
+	 		2 % 3 = 2
+	 		3 % 3 = 0
+
+	- data type conversion
+		* Java only calculate one operation each time
+		    (3 + 5 * 2) / 3  -> 5 * 2
+	    * Java only calculate two values with the same data type
+	    	3 + 3.14	-> 3.0 + 3.14
+    	* int + int = int
+    	* double + double = double
+    	* char + char = int   *** special one, when calculate with char, char will always be converted to int. 
+    	* int + char = int
+    	* int + double = double
+    	* float + double = double *** conver the less accurate one to more accurate one
+
+    	* int / int = int 
+    		0 / 5 = 0		0 % 5 = 0
+    		1 / 5 = 0		1 % 5 = 1
+    		2 / 5 = 0		2 % 5 = 2
+    		3 / 5 = 0		3 % 5 = 3
+    		4 / 5 = 0		4 % 5 = 4
+			5 / 5 = 1		5 % 5 = 0
+			6 / 5 = 1		6 % 5 = 1
+			7 / 5 = 1		7 % 5 = 2
+			8 / 5 = 1		8 % 5 = 3
+			9 / 5 = 1		9 % 5 = 4
+
+	year -> century and decade   1986 20th   2020 21th 
+		century: year / 100 + 1
+		decade: year % 100 / 10 * 10
+
+
